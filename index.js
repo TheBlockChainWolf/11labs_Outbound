@@ -29,7 +29,8 @@ fastify.register(fastifyWs);
 // Initialize Twilio client
 const twilioClient = Twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT;
+
 
 // Root route for health check
 fastify.get("/", async (_, reply) => {
